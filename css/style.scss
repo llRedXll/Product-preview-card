@@ -1,11 +1,124 @@
+// fonts
+$montserrat : 'Montserrat', sans-serif;
+$fraunces : 'Fraunces', serif;
+
+//colors
+$emerald: hsl(158, 36%, 37%);
+$forest-green: hsl(156, 42%, 18%);
+$cream: hsl(30, 38%, 92%);
+$dark-blue: hsl(212, 21%, 14%);
+$slate-blue: hsl(228, 12%, 48%);
+$white: hsl(0, 0%, 100%);
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $cream;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .product {
+    background: $white;
+    border-radius: 1rem;
+    margin: 1.6rem 2.8rem;
+
 
     &__img {
-        width: 100%;
-        height: auto;
+        border-radius: 1rem;
+        & img {
+            border-radius: 1rem 1rem 0 0;
+            width: 100%;
+        }
 
         &--desktop {
             display: none;
+        }
+    }
+
+    &__info {
+        padding: 2.4rem;
+        display: flex;
+        flex-direction: column;
+
+        &-category {
+            color: $slate-blue;
+            font-family: $montserrat;
+            font-weight: 500;
+            font-size: 1.4rem;
+            letter-spacing: .4rem;
+            text-transform: uppercase;
+            padding-bottom: 1.2rem;
+        }
+
+        &-name {
+            color: $dark-blue;
+            font-family: $fraunces;
+            font-weight: 700;
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+            letter-spacing: -0.05rem;
+            text-transform: capitalize;
+            padding-bottom: 2rem;
+        }
+
+        &-description {
+            color: $slate-blue;
+            font-family: $montserrat;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 2rem;
+            padding-bottom: 5rem;
+        }
+
+        &-price {
+            display: flex;
+            align-items: center;
+            padding-bottom: 2rem;
+
+            &--sale{
+                color: $emerald;
+                font-family: $fraunces;
+                font-weight: 700;
+                font-size: 3.2rem;
+                padding-right: 2.7rem;
+            }
+
+            &--original {
+                color: $slate-blue;
+                font-family: $montserrat;
+                font-size: 1.3rem;
+                text-decoration: line-through;
+            }
+        }
+
+        & button{
+            color: $white;
+            background: $emerald;
+            font-family: $montserrat;
+            font-weight: 700;
+            font-size: 1.4rem;
+            width: 100%;
+            padding: 1.25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            border: none;
+            border-radius: .6rem;
+            transition: background .2s ease;
+
+            &:hover {
+                background: $forest-green;
+                cursor: pointer;
+            }
         }
     }
 }
