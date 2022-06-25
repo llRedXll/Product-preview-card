@@ -1,0 +1,7 @@
+.product__img {
+  width: 100%;
+  height: auto;
+}
+.product__img--desktop {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
